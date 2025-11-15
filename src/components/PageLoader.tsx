@@ -21,10 +21,6 @@ export default function PageLoader() {
           <h1 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
             Pierfrenciano Moningka
           </h1>
-          <p className="text-muted-foreground text-xs md:text-sm max-w-xs">
-            Front-End Web Development &mdash; crafting modern, responsive, and
-            user-friendly experiences.
-          </p>
         </div>
 
         <div className="w-40 md:w-52 h-1.5 rounded-full bg-border overflow-hidden">
