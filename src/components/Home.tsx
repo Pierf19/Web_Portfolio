@@ -3,6 +3,7 @@ import { Trophy, Users } from "lucide-react";
 import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 import type { Profile, SocialLink } from "@/shared/default-data";
 import CvImage from "@/img/Cv-pier.png";
+import ProfileImage from "@/img/2.png";
 
 interface HomeProps {
   profile?: Profile;
@@ -126,10 +127,10 @@ export default function HomeSection({ profile, socialLinks }: HomeProps) {
           <div className="relative animate-[slide-in-right_.6s_ease]">
             <div className="relative mx-auto lg:ml-auto max-w-md lg:max-w-lg">
               <div className="relative aspect-square w-72 md:w-96 lg:w-[32rem] rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 p-4 sm:p-6 md:p-8 shadow-[0_10px_40px_-10px_rgba(99,102,241,0.35)]">
-                {profile?.profileImage && !imgError ? (
+                {!imgError ? (
                   <img
-                    src={profile.profileImage}
-                    alt={profile.name}
+                    src={ProfileImage}
+                    alt={profile?.name || "Profile photo"}
                     onError={() => setImgError(true)}
                     className="w-full h-full object-cover rounded-full ring-2 ring-primary/20"
                   />
