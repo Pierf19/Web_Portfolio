@@ -3,7 +3,7 @@ import {
   FaCss3,
   FaJs,
   FaPython,
-  FaBootstrap,
+  FaReact,
   FaFigma,
 } from "react-icons/fa";
 import type { IconType } from "react-icons";
@@ -19,7 +19,7 @@ const programmingSkills: SkillItem[] = [
   { name: "CSS", icon: FaCss3, color: "text-blue-500" },
   { name: "JavaScript", icon: FaJs, color: "text-yellow-400" },
   { name: "Python", icon: FaPython, color: "text-sky-500" },
-  { name: "Bootstrap", icon: FaBootstrap, color: "text-purple-500" },
+  { name: "React", icon: FaReact, color: "text-cyan-400" },
   { name: "Figma", icon: FaFigma, color: "text-pink-500" },
 ];
 

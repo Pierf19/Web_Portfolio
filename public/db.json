@@ -1,8 +1,8 @@
 {
   "profile": {
     "name": "Pierfrenciano P. Moningka",
-    "title": "Creative Designer",
-    "description": "Creating beautiful digital experiences with passion and precision.",
+    "title": "Front-End Web Development",
+    "description": "Hi, I’m Pierfrenciano — a Frontend Web Developer who loves building modern, responsive, and user-friendly websites. I work with HTML, CSS, JavaScript, React, Vite, and Tailwind CSS, focusing on clean design and great user experience.",
     "profileImage": "../src/img/2.png",
     "awardsCount": 18,
     "customersCount": 4,

@@ -168,7 +168,7 @@ export default function HomeSection({ profile, socialLinks }: HomeProps) {
                       {profile?.customersCount || 4}k+
                     </p>
                     <p className="text-muted-foreground text-sm">
-                      Happy Customers
+                      Connection
                     </p>
                   </div>
                 </div>

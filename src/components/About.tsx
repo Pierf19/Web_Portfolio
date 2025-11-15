@@ -97,19 +97,19 @@ export default function About({ profile }: AboutProps) {
               <ul className="grid sm:grid-cols-2 gap-3 text-sm">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary"></span>
-                  <span className="text-foreground/90">Pixel-perfect UI Design</span>
+                  <span className="text-foreground/90">Web Development</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary"></span>
-                  <span className="text-foreground/90">High-performance Web Apps</span>
+                  <span className="text-foreground/90">UI/UX Design</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary"></span>
-                  <span className="text-foreground/90">Responsive & Accessible</span>
+                  <span className="text-foreground/90">Web Design</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary"></span>
-                  <span className="text-foreground/90">Clean, Maintainable Code</span>
+                  <span className="text-foreground/90">App Development</span>
                 </li>
               </ul>
 
