@@ -1,4 +1,11 @@
-import { FaBehance, FaDribbble, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
+import {
+  FaBehance,
+  FaDribbble,
+  FaLinkedinIn,
+  FaGithub,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
 
 interface FooterProps {
   socialLinks?: Array<{
@@ -27,6 +34,7 @@ export function Footer({ socialLinks }: FooterProps) {
       dribbble: FaDribbble,
       linkedin: FaLinkedinIn,
       github: FaGithub,
+      instagram: FaInstagram,
       twitter: FaTwitter,
     };
     const IconComponent = iconMap[platform.toLowerCase()];
@@ -34,10 +42,12 @@ export function Footer({ socialLinks }: FooterProps) {
   };
 
   const defaultSocialLinks = socialLinks || [
-    { platform: "behance", url: "https://behance.net", icon: "behance" },
-    { platform: "dribbble", url: "https://dribbble.com", icon: "dribbble" },
-    { platform: "linkedin", url: "https://linkedin.com", icon: "linkedin" },
-    { platform: "github", url: "https://github.com", icon: "github" },
+    { platform: "github", url: "https://github.com/Pierf19", icon: "github" },
+    {
+      platform: "instagram",
+      url: "https://www.instagram.com/pier.moningka?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      icon: "instagram",
+    },
   ];
 
   const navSections = [
@@ -49,7 +59,10 @@ export function Footer({ socialLinks }: FooterProps) {
   ];
 
   return (
-    <footer className="bg-card border-t border-border py-12 lg:py-16" data-testid="footer">
+    <footer
+      className="bg-card border-t border-border py-12 lg:py-16"
+      data-testid="footer"
+    >
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           <div className="space-y-4">
@@ -76,7 +89,9 @@ export function Footer({ socialLinks }: FooterProps) {
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-lg text-foreground mb-4">Quick Links</h4>
+            <h4 className="font-heading font-bold text-lg text-foreground mb-4">
+              Quick Links
+            </h4>
             <nav className="space-y-2">
               {navSections.slice(0, 4).map((section) => (
                 <a
@@ -96,25 +111,41 @@ export function Footer({ socialLinks }: FooterProps) {
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-lg text-foreground mb-4">Services</h4>
+            <h4 className="font-heading font-bold text-lg text-foreground mb-4">
+              Services
+            </h4>
             <nav className="space-y-2">
-              <a href="#services" className="block text-muted-foreground hover:text-primary transition-colors font-body">
+              <a
+                href="#services"
+                className="block text-muted-foreground hover:text-primary transition-colors font-body"
+              >
                 UI/UX Design
               </a>
-              <a href="#services" className="block text-muted-foreground hover:text-primary transition-colors font-body">
+              <a
+                href="#services"
+                className="block text-muted-foreground hover:text-primary transition-colors font-body"
+              >
                 Web Development
               </a>
-              <a href="#services" className="block text-muted-foreground hover:text-primary transition-colors font-body">
+              <a
+                href="#services"
+                className="block text-muted-foreground hover:text-primary transition-colors font-body"
+              >
                 Mobile Apps
               </a>
-              <a href="#services" className="block text-muted-foreground hover:text-primary transition-colors font-body">
+              <a
+                href="#services"
+                className="block text-muted-foreground hover:text-primary transition-colors font-body"
+              >
                 Branding
               </a>
             </nav>
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-lg text-foreground mb-4">Newsletter</h4>
+            <h4 className="font-heading font-bold text-lg text-foreground mb-4">
+              Newsletter
+            </h4>
             <p className="text-muted-foreground font-body mb-4">
               Subscribe to get updates on latest projects and insights.
             </p>
@@ -125,11 +156,11 @@ export function Footer({ socialLinks }: FooterProps) {
                 className="flex-1 px-4 py-2 bg-background border border-border rounded-full text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 data-testid="input-newsletter"
               />
-              <button 
+              <button
                 className="px-6 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors font-heading font-semibold"
                 data-testid="button-subscribe"
               >
-                Subscribe
+                Send
               </button>
             </div>
           </div>
@@ -137,14 +168,23 @@ export function Footer({ socialLinks }: FooterProps) {
 
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground font-body text-sm" data-testid="text-copyright">
+            <p
+              className="text-muted-foreground font-body text-sm"
+              data-testid="text-copyright"
+            >
               © {currentYear} Personal Portfolio All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-body text-sm">
+              <a
+                href="#"
+                className="text-muted-foreground hover:text-primary transition-colors font-body text-sm"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors font-body text-sm">
+              <a
+                href="#"
+                className="text-muted-foreground hover:text-primary transition-colors font-body text-sm"
+              >
                 Terms of Service
               </a>
             </div>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Trophy, Users } from "lucide-react";
 import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 import type { Profile, SocialLink } from "@/shared/default-data";
+import CvImage from "@/img/Cv-pier.png";
 
 interface HomeProps {
   profile?: Profile;
@@ -42,6 +43,10 @@ export default function HomeSection({ profile, socialLinks }: HomeProps) {
     window.scrollTo({ top, behavior: "smooth" });
   };
 
+  const handleDownloadCv = () => {
+    window.open(CvImage, "_blank");
+  };
+
   return (
     <section
       id="home"
@@ -73,10 +78,10 @@ export default function HomeSection({ profile, socialLinks }: HomeProps) {
 
             <div className="flex flex-wrap gap-4 items-center">
               <button
-                onClick={() => scrollToSection("portfolio")}
+                onClick={handleDownloadCv}
                 className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-heading font-semibold shadow-lg hover:shadow-primary/30 hover:-translate-y-0.5 transition-all"
               >
-                See My Work
+                Download CV
               </button>
               <button
                 onClick={() => scrollToSection("about")}
@@ -85,6 +90,37 @@ export default function HomeSection({ profile, socialLinks }: HomeProps) {
                 About Me
               </button>
             </div>
+
+            {socialLinks && socialLinks.length > 0 && (
+              <div className="flex items-center gap-4 mt-4">
+                {socialLinks
+                  .filter((l) =>
+                    ["linkedin", "instagram", "github"].includes(
+                      l.platform.toLowerCase()
+                    )
+                  )
+                  .map((link, idx) => (
+                    <a
+                      key={`${link.platform}-${idx}`}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-11 h-11 flex items-center justify-center bg-card border border-border rounded-full hover:bg-primary hover:border-primary hover:-translate-y-0.5 transition-all text-foreground hover:text-primary-foreground"
+                      aria-label={link.platform}
+                    >
+                      {link.platform.toLowerCase() === "linkedin" && (
+                        <FaLinkedinIn className="w-5 h-5" />
+                      )}
+                      {link.platform.toLowerCase() === "instagram" && (
+                        <FaInstagram className="w-5 h-5" />
+                      )}
+                      {link.platform.toLowerCase() === "github" && (
+                        <FaGithub className="w-5 h-5" />
+                      )}
+                    </a>
+                  ))}
+              </div>
+            )}
           </div>
 
           <div className="relative animate-[slide-in-right_.6s_ease]">
@@ -143,37 +179,6 @@ export default function HomeSection({ profile, socialLinks }: HomeProps) {
           </div>
         </div>
       </div>
-
-      {socialLinks && socialLinks.length > 0 && (
-        <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden xl:flex flex-col gap-4">
-          {socialLinks
-            .filter((l) =>
-              ["linkedin", "instagram", "github"].includes(
-                l.platform.toLowerCase()
-              )
-            )
-            .map((link, idx) => (
-              <a
-                key={`${link.platform}-${idx}`}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center bg-card border border-border rounded-full hover:bg-primary hover:border-primary hover:-translate-y-1 transition-all text-foreground hover:text-primary-foreground"
-                aria-label={link.platform}
-              >
-                {link.platform.toLowerCase() === "linkedin" && (
-                  <FaLinkedinIn className="w-5 h-5" />
-                )}
-                {link.platform.toLowerCase() === "instagram" && (
-                  <FaInstagram className="w-5 h-5" />
-                )}
-                {link.platform.toLowerCase() === "github" && (
-                  <FaGithub className="w-5 h-5" />
-                )}
-              </a>
-            ))}
-        </div>
-      )}
     </section>
   );
 }

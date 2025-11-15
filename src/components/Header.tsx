@@ -28,7 +28,7 @@ export function Header({ onNavigate }: HeaderProps) {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);
@@ -39,22 +39,25 @@ export function Header({ onNavigate }: HeaderProps) {
   const navItems = [
     { id: "home", label: "Home" },
     { id: "services", label: "Services" },
+    { id: "skills", label: "Skills" },
     { id: "about", label: "About" },
     { id: "portfolio", label: "Portfolio" },
     { id: "blog", label: "Blog" },
   ];
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       }`}
       data-testid="header"
     >
       <div className="container mx-auto px-4">
         <nav className="flex items-center h-20 relative">
-          <a 
-            href="#home" 
+          <a
+            href="#home"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("home");
@@ -75,7 +78,9 @@ export function Header({ onNavigate }: HeaderProps) {
                   scrollToSection(item.id);
                 }}
                 className={`text-lg font-heading transition-colors hover:text-primary px-2 ${
-                  activeSection === item.id ? "text-primary font-semibold" : "text-foreground"
+                  activeSection === item.id
+                    ? "text-primary font-semibold"
+                    : "text-foreground"
                 }`}
                 data-testid={`link-${item.id}`}
               >
@@ -94,7 +99,7 @@ export function Header({ onNavigate }: HeaderProps) {
         </nav>
 
         {isMobileMenuOpen && (
-          <div 
+          <div
             className="lg:hidden bg-card border border-border rounded-lg p-6 mb-4 shadow-xl animate-fade-in"
             data-testid="mobile-menu"
           >
@@ -108,7 +113,9 @@ export function Header({ onNavigate }: HeaderProps) {
                     scrollToSection(item.id);
                   }}
                   className={`text-lg font-heading transition-colors hover:text-primary py-2 ${
-                    activeSection === item.id ? "text-primary font-semibold" : "text-foreground"
+                    activeSection === item.id
+                      ? "text-primary font-semibold"
+                      : "text-foreground"
                   }`}
                   data-testid={`mobile-link-${item.id}`}
                 >

@@ -4,10 +4,17 @@ import { Header } from "@/components/Header";
 import HomeSection from "@/components/Home";
 import About from "@/components/About";
 import { Services } from "@/components/Services";
+import { Skills } from "@/components/Skills";
 import { Portfolio } from "@/components/Portfolio";
 import { Blog } from "@/components/Blog";
 import { Footer } from "@/components/Footer";
-import type { Profile, Service, PortfolioProject, BlogPost, SocialLink } from "@/shared/default-data";
+import type {
+  Profile,
+  Service,
+  PortfolioProject,
+  BlogPost,
+  SocialLink,
+} from "@/shared/default-data";
 
 type DbJson = {
   profile?: Profile;
@@ -53,7 +60,9 @@ export default function Home() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center space-y-4 px-4">
-          <h2 className="text-2xl font-heading font-bold text-foreground">Gagal memuat portfolio</h2>
+          <h2 className="text-2xl font-heading font-bold text-foreground">
+            Gagal memuat portfolio
+          </h2>
           <p className="text-muted-foreground">Silakan refresh halaman</p>
           <button
             onClick={() => window.location.reload()}
@@ -72,6 +81,7 @@ export default function Home() {
       <HomeSection profile={data?.profile} socialLinks={data?.socialLinks} />
       <About profile={data?.profile} />
       <Services services={data?.services} />
+      <Skills />
       <Portfolio projects={data?.portfolio} />
       <Blog posts={data?.blog} />
       <Footer socialLinks={data?.socialLinks} />

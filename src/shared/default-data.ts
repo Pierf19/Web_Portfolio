@@ -136,7 +136,6 @@ export const defaultPortfolio: PortfolioProject[] = [
       "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
     featured: false,
   },
-
 ];
 
 export const defaultTestimonials: Testimonial[] = [
@@ -203,9 +202,11 @@ export const defaultBlogPosts: BlogPost[] = [
 ];
 
 export const defaultSocialLinks: SocialLink[] = [
-  { platform: "behance", url: "https://behance.net", icon: "behance" },
-  { platform: "dribbble", url: "https://dribbble.com", icon: "dribbble" },
-  { platform: "linkedin", url: "https://linkedin.com", icon: "linkedin" },
-  { platform: "github", url: "https://github.com", icon: "github" },
+  { platform: "linkedin", url: "#", icon: "linkedin" },
+  { platform: "github", url: "https://github.com/Pierf19", icon: "github" },
+  {
+    platform: "instagram",
+    url: "https://www.instagram.com/pier.moningka?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    icon: "instagram",
+  },
 ];
-

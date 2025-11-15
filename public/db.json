@@ -3,12 +3,12 @@
     "name": "Pierfrenciano P. Moningka",
     "title": "Creative Designer",
     "description": "Creating beautiful digital experiences with passion and precision.",
-    "profileImage": "./src/img/2.png",
+    "profileImage": "../src/img/2.png",
     "awardsCount": 18,
     "customersCount": 4,
-    "email": "hello@piermonica.com",
-    "phone": "+1 (555) 123-4567",
-    "location": "San Francisco, CA"
+    "email": "S22310159@student.unklab.ac.id",
+    "phone": "6281244043679",
+    "location": "Manado"
   },
   "services": [
     {
@@ -139,17 +139,17 @@
   "socialLinks": [
     {
       "platform": "linkedin",
-      "url": "https://linkedin.com/in/pier-monica",
+      "url": "#",
       "icon": "linkedin"
     },
     {
       "platform": "instagram",
-      "url": "https://instagram.com/pier_monica",
+      "url": "https://www.instagram.com/pier.moningka?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       "icon": "instagram"
     },
     {
       "platform": "github",
-      "url": "https://github.com/pier-monica",
+      "url": "https://github.com/Pierf19",
       "icon": "github"
     }
   ]
