@@ -12,13 +12,8 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist", // ⬅️ WAJIB untuk Vercel
+    outDir: "dist", // ⬅️ WAJIB dist !!
     emptyOutDir: true,
   },
-  server: {
-    fs: {
-      strict: true,
-      deny: ["**/.*"],
-    },
-  },
+  publicDir: "public", // ⬅️ ini biar folder public tidak bentrok
 });
